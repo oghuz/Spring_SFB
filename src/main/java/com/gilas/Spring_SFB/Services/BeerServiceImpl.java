@@ -1,11 +1,13 @@
 package com.gilas.Spring_SFB.Services;
 
 import com.gilas.Spring_SFB.Web.model.BeerDetails;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
-
+@Slf4j
 @Service
 public class BeerServiceImpl implements BeerService {
     @Override
@@ -32,5 +34,10 @@ public class BeerServiceImpl implements BeerService {
                     .bearStyle(beerDto.getBearStyle())
                     .build();
 
+    }
+
+    @Override
+    public void deleteBeer(UUID bearId) {
+        log.debug("Deleted Beer with ID: " + bearId);
     }
 }
