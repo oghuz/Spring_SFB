@@ -14,4 +14,5 @@ public class BeerDetails {
     private String bearStyle;
     private String upc;
 
+
 }

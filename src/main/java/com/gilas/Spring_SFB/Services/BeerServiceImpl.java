@@ -15,4 +15,12 @@ public class BeerServiceImpl implements BeerService {
                                     .bearStyle("Non Alco")
                                     .build();
     }
+
+    @Override
+    public BeerDetails saveNewBeer(BeerDetails beerDetails) {
+        return BeerDetails.builder()
+                            .id(UUID.randomUUID())
+                            .bearName("Belkin Peach")
+                            .build();
+    }
 }
