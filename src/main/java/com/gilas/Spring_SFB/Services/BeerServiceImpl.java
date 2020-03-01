@@ -23,4 +23,14 @@ public class BeerServiceImpl implements BeerService {
                             .bearName("Belkin Peach")
                             .build();
     }
+
+    @Override
+    public void updateBeer(UUID bearId, BeerDetails beerDto) {
+        BeerDetails.builder()
+                    .id(beerDto.getId())
+                    .bearName(beerDto.getBearName())
+                    .bearStyle(beerDto.getBearStyle())
+                    .build();
+
+    }
 }
